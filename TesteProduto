@@ -1,0 +1,24 @@
+public class TesteProduto {
+    public static void main(String[] args) {
+
+        Produto p1 = new Produto("Creme de leite", 3.99, 100);
+        Produto p2 = new Produto("Água", 1.99, 500);
+
+        System.out.println("Quantidade dos produtos antes operações:");
+        imprimirDetalhesProduto(p1);
+        imprimirDetalhesProduto(p2);
+
+        produto1.adicionarEstoque(50);
+        produto2.removerEstoque(100);
+
+        System.out.println("\nQuantidade dos produto após operação: ");
+        imprimirDetalhesProduto(p1);
+        imprimirDetalhesProduto(p2);
+    }
+
+    private static void imprimirDetalhesProduto(Produto produto) {
+        System.out.println("Nome: " + produto.getNome());
+        System.out.println("Preço: R$" + produto.getPrecoUnitario());
+        System.out.println("Quantidade em Estoque: " + produto.getQuantidadeEmEstoque());
+    }
+}
